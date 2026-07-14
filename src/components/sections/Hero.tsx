@@ -39,7 +39,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.9 }}
-          className="mx-auto mt-6 max-w-xl font-serif text-xl italic text-[var(--aether)] neon-teal sm:text-2xl"
+          className="mx-auto mt-6 max-w-xl font-mono text-base uppercase tracking-[0.18em] text-[var(--aether)] neon-teal sm:text-lg"
         >
           {SITE.tagline}
         </motion.p>

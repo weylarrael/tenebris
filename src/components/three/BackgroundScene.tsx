@@ -23,7 +23,7 @@ function Nebula() {
       new THREE.MeshBasicMaterial({
         color: "#0a2f38",
         transparent: true,
-        opacity: 0.18,
+        opacity: 0.08,
         side: THREE.BackSide,
         blending: THREE.AdditiveBlending,
       }),

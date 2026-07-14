@@ -15,7 +15,7 @@ export default function StarfieldBackground() {
       className="pointer-events-none fixed inset-0 -z-10"
       style={{
         background:
-          "radial-gradient(ellipse at 50% 0%, #07101a 0%, #04050b 45%, #020205 100%)",
+          "radial-gradient(ellipse at 50% 0%, #050509 0%, #020203 55%, #000000 100%)",
       }}
     >
       <BackgroundScene />

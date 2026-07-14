@@ -2,7 +2,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function Academia() {
   return (
-    <section id="academia" className="relative mx-auto max-w-5xl px-6 py-28 sm:py-36">
+    <section id="academia" className="relative mx-auto max-w-6xl px-6 py-28 sm:py-36">
       <Reveal className="text-center">
         <p className="font-display text-xs uppercase tracking-arcane text-[var(--aether)]">
           La Academia
@@ -32,23 +32,28 @@ export default function Academia() {
       </Reveal>
 
       <Reveal delay={0.25}>
-        <div className="mx-auto mt-16 max-w-3xl">
-          <div className="rune-line" />
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mt-16">
+          <div className="mx-auto mb-10 max-w-3xl rune-line" />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
             {[
-              { k: "∞", v: "Difusión", d: "Conocimiento abierto y comunitario" },
-              { k: "✶", v: "Instrucción", d: "Acompañamiento uno a uno" },
-              { k: "✦", v: "Sensibilidad", d: "El don que se cultiva, no se hereda" },
+              { k: "∞", v: "Difusión", d: "Conocimiento abierto y comunitario para todo buscador." },
+              { k: "✶", v: "Instrucción", d: "Acompañamiento uno a uno en cada tramo del sendero." },
+              { k: "✦", v: "Sensibilidad", d: "El don que se cultiva, no se hereda: se despierta." },
             ].map((item) => (
               <div
                 key={item.v}
-                className="card-arcane rounded-2xl px-6 py-8 text-center"
+                className="card-arcane group relative overflow-hidden rounded-2xl p-7"
               >
-                <div className="text-2xl text-gold">{item.k}</div>
-                <div className="mt-3 font-display text-sm uppercase tracking-[0.2em] text-parchment">
-                  {item.v}
+                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-violet/20 blur-3xl transition-opacity duration-500 group-hover:bg-gold/20" />
+                <div className="relative">
+                  <span className="font-display text-3xl text-gold transition-transform duration-500 group-hover:scale-110">
+                    {item.k}
+                  </span>
+                  <h3 className="mt-5 font-display text-lg tracking-wide text-parchment">
+                    {item.v}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{item.d}</p>
                 </div>
-                <div className="mt-2 text-xs text-muted">{item.d}</div>
               </div>
             ))}
           </div>

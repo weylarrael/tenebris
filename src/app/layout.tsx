@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Cinzel, Cormorant_Garamond, Inter, Orbitron } from "next/font/google";
+import {
+  Cinzel,
+  Cormorant_Garamond,
+  Inter,
+  Orbitron,
+  Share_Tech_Mono,
+} from "next/font/google";
 import "./globals.css";
 import StarfieldBackground from "@/components/three/StarfieldBackground";
 
@@ -26,6 +32,13 @@ const orbitron = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
   weight: ["500", "600", "700", "800", "900"],
+});
+
+// Robotic mono, used for the hero tagline.
+const techMono = Share_Tech_Mono({
+  variable: "--font-tech-mono",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 const siteUrl = "https://tenebris.vercel.app";
@@ -66,7 +79,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} ${orbitron.variable}`}
+      className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} ${orbitron.variable} ${techMono.variable}`}
     >
       <body className="min-h-screen antialiased">
         <StarfieldBackground />

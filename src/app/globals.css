@@ -2,9 +2,9 @@
 
 :root {
   /* Cyberpunk core: black · fuchsia · gold · dark turquoise */
-  --void: #050409;
-  --void-2: #08061a;
-  --ink: #05050c; /* card black */
+  --void: #030305;
+  --void-2: #06060c;
+  --ink: #050508; /* card black */
   --violet-deep: #0c0722;
   --violet: #cf0656; /* repurposed → fuchsia (glows) */
   --violet-soft: #17e0cf; /* repurposed → turquoise */
@@ -102,6 +102,9 @@ body::after {
 }
 .font-wordmark {
   font-family: var(--font-orbitron), sans-serif;
+}
+.font-mono {
+  font-family: var(--font-tech-mono), monospace;
 }
 
 /* Neon glows */
