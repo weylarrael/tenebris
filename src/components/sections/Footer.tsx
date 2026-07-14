@@ -1,7 +1,6 @@
 import { LINKS, SITE } from "@/lib/site";
 import {
   InstagramIcon,
-  PatreonIcon,
   TikTokIcon,
   WhatsAppIcon,
   YouTubeIcon,
@@ -11,7 +10,6 @@ const SOCIALS = [
   { label: "Instagram", href: LINKS.instagram, Icon: InstagramIcon },
   { label: "TikTok", href: LINKS.tiktok, Icon: TikTokIcon },
   { label: "YouTube", href: LINKS.youtube, Icon: YouTubeIcon },
-  { label: "Patreon", href: LINKS.patreon, Icon: PatreonIcon },
   { label: "WhatsApp", href: LINKS.whatsapp, Icon: WhatsAppIcon },
 ];
 

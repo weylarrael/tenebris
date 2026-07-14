@@ -41,8 +41,8 @@ function StarDome({ mobile }: { mobile: boolean }) {
   const group = useRef<THREE.Group>(null);
   useFrame((_, delta) => {
     if (group.current) {
-      group.current.rotation.y += delta * 0.012;
-      group.current.rotation.x += delta * 0.004;
+      group.current.rotation.y += delta * 0.004;
+      group.current.rotation.x += delta * 0.0012;
     }
   });
   return (
@@ -54,7 +54,7 @@ function StarDome({ mobile }: { mobile: boolean }) {
         factor={4}
         saturation={0}
         fade
-        speed={0.5}
+        speed={0.25}
       />
       <Sparkles
         count={mobile ? 60 : 130}

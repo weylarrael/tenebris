@@ -32,7 +32,7 @@ export default function Disciplinas() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: (i % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-void/60 p-7 transition-colors duration-500 hover:border-gold/40"
+              className="card-arcane group relative overflow-hidden rounded-2xl p-7"
             >
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-violet/20 blur-3xl transition-opacity duration-500 group-hover:bg-gold/20" />
               <div className="relative">
