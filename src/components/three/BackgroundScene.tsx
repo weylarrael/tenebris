@@ -21,9 +21,9 @@ function Nebula() {
   const mat = useMemo(
     () =>
       new THREE.MeshBasicMaterial({
-        color: "#241452",
+        color: "#0a2f38",
         transparent: true,
-        opacity: 0.35,
+        opacity: 0.4,
         side: THREE.BackSide,
         blending: THREE.AdditiveBlending,
       }),
@@ -61,16 +61,16 @@ function StarDome({ mobile }: { mobile: boolean }) {
         scale={[20, 14, 12]}
         size={2.4}
         speed={0.3}
-        opacity={0.7}
-        color="#f0d79a"
+        opacity={0.75}
+        color="#17e0cf"
       />
       <Sparkles
         count={mobile ? 30 : 60}
         scale={[18, 12, 10]}
         size={3.2}
         speed={0.18}
-        opacity={0.45}
-        color="#b9a7ff"
+        opacity={0.55}
+        color="#ff2d95"
       />
     </group>
   );

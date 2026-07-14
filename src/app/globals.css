@@ -1,19 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --void: #06050c;
-  --void-2: #0b0918;
-  --ink: #100b22;
-  --violet-deep: #1d1240;
-  --violet: #5a47b0;
-  --violet-soft: #b9a7ff;
-  --gold: #d8b25a;
-  --gold-bright: #f0d79a;
-  --gold-dim: #8a7034;
-  --aether: #8fd9e6;
-  --parchment: #ece6da;
-  --muted: #9a92ad;
-  --line: rgba(216, 178, 90, 0.16);
+  /* Cyberpunk core: black · fuchsia · gold · dark turquoise */
+  --void: #050409;
+  --void-2: #08061a;
+  --ink: #05050c; /* card black */
+  --violet-deep: #0c0722;
+  --violet: #cf0656; /* repurposed → fuchsia (glows) */
+  --violet-soft: #17e0cf; /* repurposed → turquoise */
+  --gold: #e6b94f;
+  --gold-bright: #ffe6a1;
+  --gold-dim: #7a5f2a;
+  --aether: #17e0cf; /* neon turquoise */
+  --teal-deep: #06181c;
+  --fuchsia: #cf0656;
+  --fuchsia-2: #bf0662;
+  --fuchsia-neon: #ff2d95;
+  --parchment: #e4eef0; /* cool light text */
+  --muted: #8ea3a8; /* teal-grey */
+  --line: rgba(207, 6, 86, 0.3);
   --edge-a: #bf0662;
   --edge-b: #cf0656;
 }
@@ -28,12 +33,15 @@
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
   --color-aether: var(--aether);
+  --color-fuchsia: var(--fuchsia);
+  --color-fuchsia-neon: var(--fuchsia-neon);
   --color-parchment: var(--parchment);
   --color-muted: var(--muted);
 
-  --font-display: var(--font-cinzel);
-  --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-inter);
+  --font-display: var(--font-orbitron);
+  --font-serif: var(--font-chakra);
+  --font-sans: var(--font-chakra);
+  --font-mono: var(--font-tech-mono);
 }
 
 * {
@@ -47,14 +55,32 @@ html {
 body {
   background-color: var(--void);
   color: var(--parchment);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-chakra), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
+/* Subtle CRT scanlines for cyberpunk texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.16) 0px,
+    rgba(0, 0, 0, 0.16) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
 ::selection {
-  background: rgba(216, 178, 90, 0.25);
-  color: var(--gold-bright);
+  background: rgba(207, 6, 86, 0.35);
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -64,28 +90,46 @@ body {
   background: var(--void);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--violet), var(--gold-dim));
+  background: linear-gradient(var(--fuchsia), var(--aether));
   border-radius: 9px;
 }
 
 .font-display {
-  font-family: var(--font-cinzel), serif;
+  font-family: var(--font-orbitron), sans-serif;
 }
 .font-serif {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-chakra), sans-serif;
+}
+.font-mono {
+  font-family: var(--font-tech-mono), monospace;
 }
 
+/* Neon glows */
+.neon-fuchsia {
+  text-shadow: 0 0 6px rgba(255, 45, 149, 0.55), 0 0 22px rgba(207, 6, 86, 0.45);
+}
+.neon-teal {
+  text-shadow: 0 0 6px rgba(23, 224, 207, 0.5), 0 0 20px rgba(23, 224, 207, 0.35);
+}
+
+/* Gradient headline: fuchsia → gold → turquoise, animated */
 .text-aurum {
-  background: linear-gradient(120deg, var(--gold) 0%, var(--gold-bright) 45%, #fff7e2 55%, var(--gold) 100%);
-  background-size: 200% auto;
+  background: linear-gradient(
+    100deg,
+    var(--fuchsia-neon) 0%,
+    var(--gold-bright) 45%,
+    #fff 52%,
+    var(--aether) 100%
+  );
+  background-size: 220% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: aurum 9s linear infinite;
+  animation: aurum 10s linear infinite;
 }
 @keyframes aurum {
   to {
-    background-position: 200% center;
+    background-position: 220% center;
   }
 }
 
@@ -95,26 +139,25 @@ body {
 
 .rune-line {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  background: linear-gradient(90deg, transparent, var(--fuchsia), transparent);
 }
 
-/* Card with a magenta gradient edge (keeps the translucent fill so stars
-   remain visible behind it). */
+/* Card: black fill with a neon fuchsia gradient edge + glow */
 .card-arcane {
   border: 1px solid transparent;
-  background:
-    linear-gradient(rgba(10, 8, 22, 0.62), rgba(10, 8, 22, 0.62)) padding-box,
+  background: linear-gradient(#070510, #05040c) padding-box,
     linear-gradient(140deg, var(--edge-a), var(--edge-b)) border-box;
-  transition: box-shadow 0.5s ease, transform 0.5s ease;
+  box-shadow: 0 0 0 1px rgba(207, 6, 86, 0.08), 0 0 24px -14px rgba(207, 6, 86, 0.75);
+  transition: box-shadow 0.45s ease, transform 0.45s ease;
 }
 .card-arcane:hover {
-  box-shadow: 0 0 26px -8px rgba(207, 6, 86, 0.5);
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(255, 45, 149, 0.55), 0 0 34px -8px rgba(207, 6, 86, 0.6);
+  transform: translateY(-3px);
 }
 
 .glow-ring {
-  box-shadow: 0 0 0 1px rgba(216, 178, 90, 0.2), 0 0 40px -12px rgba(90, 71, 176, 0.6),
-    inset 0 0 30px -18px rgba(216, 178, 90, 0.5);
+  box-shadow: 0 0 0 1px rgba(207, 6, 86, 0.25), 0 0 44px -12px rgba(207, 6, 86, 0.55),
+    inset 0 0 30px -18px rgba(23, 224, 207, 0.4);
 }
 
 @media (prefers-reduced-motion: reduce) {

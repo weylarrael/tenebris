@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { Cinzel, Cormorant_Garamond, Inter } from "next/font/google";
+import { Orbitron, Chakra_Petch, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
 import StarfieldBackground from "@/components/three/StarfieldBackground";
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const chakra = Chakra_Petch({
+  variable: "--font-chakra",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const techMono = Share_Tech_Mono({
+  variable: "--font-tech-mono",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 const siteUrl = "https://tenebris.vercel.app";
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${cinzel.variable} ${cormorant.variable} ${inter.variable}`}
+      className={`${orbitron.variable} ${chakra.variable} ${techMono.variable}`}
     >
       <body className="min-h-screen antialiased">
         <StarfieldBackground />

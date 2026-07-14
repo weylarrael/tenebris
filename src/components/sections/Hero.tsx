@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.05] tracking-[0.12em] sm:mt-6 sm:text-7xl sm:tracking-[0.2em] md:text-8xl"
+          className="mt-5 font-display text-[2.5rem] font-bold leading-[1.05] tracking-[0.12em] drop-shadow-[0_0_20px_rgba(207,6,86,0.4)] sm:mt-6 sm:text-7xl sm:tracking-[0.2em] md:text-8xl"
         >
           <span className="text-aurum">TENEBRIS</span>
         </motion.h1>
@@ -39,7 +39,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.9 }}
-          className="mx-auto mt-6 max-w-xl font-serif text-xl italic text-parchment/85 sm:text-2xl"
+          className="mx-auto mt-6 max-w-xl font-mono text-base uppercase tracking-[0.18em] text-[var(--aether)] neon-teal sm:text-lg"
         >
           {SITE.tagline}
         </motion.p>
@@ -62,7 +62,7 @@ export default function Hero() {
         >
           <a
             href="#disciplinas"
-            className="rounded-full bg-gradient-to-r from-gold-dim via-gold to-gold-bright px-8 py-3 text-xs font-medium uppercase tracking-[0.24em] text-void transition hover:brightness-110"
+            className="rounded-md bg-gradient-to-r from-gold-dim via-gold to-gold-bright px-8 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-void shadow-[0_0_22px_-4px_rgba(230,185,79,0.55)] transition hover:brightness-110"
           >
             Iniciar el sendero
           </a>
@@ -70,7 +70,7 @@ export default function Hero() {
             href={LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[var(--line)] px-8 py-3 text-xs uppercase tracking-[0.24em] text-parchment/90 transition hover:border-gold hover:text-gold-bright"
+            className="rounded-md border border-[var(--fuchsia)] px-8 py-3 text-xs uppercase tracking-[0.24em] text-parchment/90 shadow-[0_0_18px_-6px_rgba(207,6,86,0.6)] transition hover:bg-[rgba(207,6,86,0.12)] hover:text-[var(--fuchsia-neon)]"
           >
             Sesiones por WhatsApp
           </a>

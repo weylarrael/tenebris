@@ -12,7 +12,7 @@ export default function Disciplinas() {
     >
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="font-display text-xs uppercase tracking-arcane text-gold/70">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[var(--aether)]">
             Las Disciplinas
           </p>
           <h2 className="mt-6 font-display text-3xl sm:text-4xl md:text-5xl">

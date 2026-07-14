@@ -34,27 +34,27 @@ function Sigil() {
     <group>
       <Icosahedron ref={core} args={[1.05, 1]}>
         <meshStandardMaterial
-          color="#2a1f57"
-          emissive="#6b54c9"
-          emissiveIntensity={0.65}
-          metalness={0.6}
-          roughness={0.25}
+          color="#2a0716"
+          emissive="#ff1f8f"
+          emissiveIntensity={0.8}
+          metalness={0.7}
+          roughness={0.2}
           flatShading
         />
       </Icosahedron>
 
       <Icosahedron ref={wire} args={[1.55, 1]}>
-        <meshBasicMaterial color="#d8b25a" wireframe transparent opacity={0.55} />
+        <meshBasicMaterial color="#17e0cf" wireframe transparent opacity={0.6} />
       </Icosahedron>
 
       <group ref={ringA} rotation={[Math.PI / 2.2, 0, 0]}>
         <Ring args={[2.3, 2.34, 96]}>
-          <meshBasicMaterial color="#f0d79a" transparent opacity={0.5} side={THREE.DoubleSide} />
+          <meshBasicMaterial color="#ffe6a1" transparent opacity={0.55} side={THREE.DoubleSide} />
         </Ring>
       </group>
       <group ref={ringB} rotation={[Math.PI / 1.7, 0.6, 0]}>
         <Torus args={[2.75, 0.012, 16, 120]}>
-          <meshBasicMaterial color="#b9a7ff" transparent opacity={0.55} />
+          <meshBasicMaterial color="#ff2d95" transparent opacity={0.65} />
         </Torus>
       </group>
     </group>
@@ -69,10 +69,10 @@ export default function ArcaneScene() {
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
     >
       <Suspense fallback={null}>
-        <ambientLight intensity={0.25} />
-        <pointLight position={[6, 4, 6]} intensity={120} color="#d8b25a" />
-        <pointLight position={[-6, -3, 2]} intensity={90} color="#6b54c9" />
-        <pointLight position={[0, 0, 4]} intensity={40} color="#8fd9e6" />
+        <ambientLight intensity={0.22} />
+        <pointLight position={[6, 4, 6]} intensity={120} color="#ff2d95" />
+        <pointLight position={[-6, -3, 2]} intensity={90} color="#17e0cf" />
+        <pointLight position={[0, 0, 4]} intensity={50} color="#ffe6a1" />
 
         <Float speed={1.4} rotationIntensity={0.4} floatIntensity={0.6}>
           <Sigil />
