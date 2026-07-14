@@ -1,11 +1,11 @@
 import Reveal from "@/components/ui/Reveal";
 
-export default function Sanctum() {
+export default function Academia() {
   return (
-    <section id="sanctum" className="relative mx-auto max-w-5xl px-6 py-28 sm:py-36">
+    <section id="academia" className="relative mx-auto max-w-5xl px-6 py-28 sm:py-36">
       <Reveal className="text-center">
         <p className="font-display text-xs uppercase tracking-arcane text-gold/70">
-          El Sanctum
+          La Academia
         </p>
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
           Una academia para quienes

@@ -15,9 +15,9 @@ export const LINKS = {
 };
 
 export const NAV = [
-  { label: "Sanctum", href: "#sanctum" },
+  { label: "La Academia", href: "#academia" },
   { label: "Disciplinas", href: "#disciplinas" },
-  { label: "Membresía", href: "#membresia" },
+  { label: "Tienda", href: "#tienda" },
   { label: "Sesiones", href: "#sesiones" },
 ];
 
@@ -50,6 +50,38 @@ export const DISCIPLINAS = [
   {
     title: "Conexión Arcturiana",
     desc: "Sintonía con la frecuencia estelar de Arcturus. La raíz cósmica de la enseñanza de Shangri-La.",
+    glyph: "✷",
+  },
+];
+
+// Catálogo inicial (placeholder) — reemplazar por productos y precios reales.
+export const SHOP = [
+  {
+    title: "Lectura de Registros Akáshicos",
+    desc: "Sesión individual de acceso y lectura de la memoria del alma.",
+    price: "Consultar",
+    tag: "Sesión",
+    glyph: "☰",
+  },
+  {
+    title: "Activación del Lenguaje de la Luz",
+    desc: "Iniciación guiada para despertar tu sensibilidad energética.",
+    price: "Consultar",
+    tag: "Iniciación",
+    glyph: "✦",
+  },
+  {
+    title: "Integración Ancestral",
+    desc: "Proceso de sanación y reconexión con el linaje.",
+    price: "Consultar",
+    tag: "Proceso",
+    glyph: "⚶",
+  },
+  {
+    title: "Talismán Arcturiano",
+    desc: "Herramienta mística consagrada para tu práctica personal.",
+    price: "Consultar",
+    tag: "Herramienta",
     glyph: "✷",
   },
 ];

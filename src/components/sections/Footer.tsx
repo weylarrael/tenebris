@@ -17,7 +17,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--line)] bg-void-2">
+    <footer className="border-t border-[var(--line)] bg-void-2/70 backdrop-blur-sm">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col items-center gap-8 text-center">
           <a href="#top" className="flex items-center gap-3">
@@ -50,7 +50,7 @@ export default function Footer() {
           </p>
 
           <p className="text-[0.7rem] tracking-[0.2em] text-muted/60">
-            © {new Date().getFullYear()} TENEBRIS — Tenebris : Sanctum
+            © {new Date().getFullYear()} TENEBRIS · {SITE.creator}
           </p>
         </div>
       </div>

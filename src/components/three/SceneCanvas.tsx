@@ -7,9 +7,11 @@ const ArcaneScene = dynamic(() => import("./ArcaneScene"), {
   loading: () => null,
 });
 
+/* Hero-only sigil canvas. pointer-events-none so it never blocks taps/scroll
+   on mobile — the global starfield handles the parallax. */
 export default function SceneCanvas() {
   return (
-    <div className="absolute inset-0 -z-0">
+    <div className="pointer-events-none absolute inset-0 z-0">
       <ArcaneScene />
     </div>
   );

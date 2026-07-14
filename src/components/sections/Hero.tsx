@@ -21,16 +21,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-display text-[0.7rem] uppercase tracking-arcane text-gold/80 sm:text-xs"
+          className="px-2 font-display text-[0.62rem] uppercase leading-relaxed tracking-[0.2em] text-gold/80 sm:text-xs sm:tracking-arcane"
         >
           {SITE.academy}
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 24, letterSpacing: "0.6em" }}
-          animate={{ opacity: 1, y: 0, letterSpacing: "0.25em" }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 font-display text-6xl font-semibold tracking-arcane sm:text-7xl md:text-8xl"
+          className="mt-5 font-display text-[2.5rem] font-semibold leading-[1.05] tracking-[0.12em] sm:mt-6 sm:text-7xl sm:tracking-[0.2em] md:text-8xl"
         >
           <span className="text-aurum">TENEBRIS</span>
         </motion.h1>

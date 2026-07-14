@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import StarfieldBackground from "@/components/three/StarfieldBackground";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -60,7 +61,10 @@ export default function RootLayout({
       lang="es"
       className={`${cinzel.variable} ${cormorant.variable} ${inter.variable}`}
     >
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        <StarfieldBackground />
+        {children}
+      </body>
     </html>
   );
 }
