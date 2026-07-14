@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 font-display text-[2.5rem] font-bold leading-[1.05] tracking-[0.12em] drop-shadow-[0_0_20px_rgba(207,6,86,0.4)] sm:mt-6 sm:text-7xl sm:tracking-[0.2em] md:text-8xl"
+          className="mt-5 font-wordmark text-[2.5rem] font-bold leading-[1.05] tracking-[0.12em] drop-shadow-[0_0_20px_rgba(207,6,86,0.4)] sm:mt-6 sm:text-7xl sm:tracking-[0.2em] md:text-8xl"
         >
           <span className="text-aurum">TENEBRIS</span>
         </motion.h1>
@@ -39,7 +39,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.9 }}
-          className="mx-auto mt-6 max-w-xl font-mono text-base uppercase tracking-[0.18em] text-[var(--aether)] neon-teal sm:text-lg"
+          className="mx-auto mt-6 max-w-xl font-serif text-xl italic text-[var(--aether)] neon-teal sm:text-2xl"
         >
           {SITE.tagline}
         </motion.p>

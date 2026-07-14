@@ -11,7 +11,7 @@ export default function Sesiones() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(207,6,86,0.16),transparent_60%)]" />
 
       <Reveal className="relative mx-auto max-w-2xl px-6 text-center">
-        <p className="font-mono text-xs uppercase tracking-[0.32em] text-[var(--aether)]">
+        <p className="font-display text-xs uppercase tracking-arcane text-[var(--aether)]">
           Sesiones
         </p>
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl md:text-5xl">

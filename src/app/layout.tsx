@@ -1,24 +1,31 @@
 import type { Metadata } from "next";
-import { Orbitron, Chakra_Petch, Share_Tech_Mono } from "next/font/google";
+import { Cinzel, Cormorant_Garamond, Inter, Orbitron } from "next/font/google";
 import "./globals.css";
 import StarfieldBackground from "@/components/three/StarfieldBackground";
 
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+// Wordmark-only: "TENEBRIS" keeps the cyberpunk Orbitron face.
 const orbitron = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const chakra = Chakra_Petch({
-  variable: "--font-chakra",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const techMono = Share_Tech_Mono({
-  variable: "--font-tech-mono",
-  subsets: ["latin"],
-  weight: ["400"],
+  weight: ["500", "600", "700", "800", "900"],
 });
 
 const siteUrl = "https://tenebris.vercel.app";
@@ -59,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${orbitron.variable} ${chakra.variable} ${techMono.variable}`}
+      className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} ${orbitron.variable}`}
     >
       <body className="min-h-screen antialiased">
         <StarfieldBackground />

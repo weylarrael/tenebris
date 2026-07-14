@@ -9,7 +9,7 @@ export default function Tienda() {
   return (
     <section id="tienda" className="relative mx-auto max-w-6xl px-6 py-28 sm:py-36">
       <Reveal className="mx-auto max-w-2xl text-center">
-        <p className="font-mono text-xs uppercase tracking-[0.32em] text-[var(--aether)]">
+        <p className="font-display text-xs uppercase tracking-arcane text-[var(--aether)]">
           La Tienda
         </p>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl md:text-5xl">

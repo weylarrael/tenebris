@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 text-center">
           <a href="#top" className="flex items-center gap-3">
             <span className="text-gold">✦</span>
-            <span className="font-display text-lg tracking-arcane text-parchment">
+            <span className="font-wordmark text-lg tracking-arcane text-parchment">
               TENEBRIS
             </span>
           </a>

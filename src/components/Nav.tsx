@@ -27,7 +27,7 @@ export default function Nav() {
           <span className="text-gold text-lg leading-none transition group-hover:rotate-180 duration-700">
             ✦
           </span>
-          <span className="font-display text-lg tracking-arcane text-parchment">
+          <span className="font-wordmark text-lg tracking-arcane text-parchment">
             TENEBRIS
           </span>
         </a>
