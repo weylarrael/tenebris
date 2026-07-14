@@ -8,7 +8,7 @@ export default function Disciplinas() {
   return (
     <section
       id="disciplinas"
-      className="relative border-y border-[var(--line)] bg-[rgba(11,9,24,0.35)] py-28 backdrop-blur-[2px] sm:py-36"
+      className="relative border-y border-[var(--line)] bg-[rgba(4,4,8,0.45)] py-28 backdrop-blur-[2px] sm:py-36"
     >
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">

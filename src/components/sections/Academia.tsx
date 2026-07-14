@@ -34,13 +34,16 @@ export default function Academia() {
       <Reveal delay={0.25}>
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="rune-line" />
-          <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {[
               { k: "∞", v: "Difusión", d: "Conocimiento abierto y comunitario" },
               { k: "✶", v: "Instrucción", d: "Acompañamiento uno a uno" },
               { k: "✦", v: "Sensibilidad", d: "El don que se cultiva, no se hereda" },
             ].map((item) => (
-              <div key={item.v} className="bg-void-2 px-6 py-8 text-center">
+              <div
+                key={item.v}
+                className="card-arcane rounded-2xl px-6 py-8 text-center"
+              >
                 <div className="text-2xl text-gold">{item.k}</div>
                 <div className="mt-3 font-display text-sm uppercase tracking-[0.2em] text-parchment">
                   {item.v}
