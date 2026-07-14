@@ -31,14 +31,14 @@ function Sigil() {
   });
 
   return (
-    <group>
-      <Icosahedron ref={core} args={[1.05, 1]}>
+    <group scale={0.82} position={[0, -0.15, -1.2]}>
+      <Icosahedron ref={core} args={[0.9, 1]}>
         <meshStandardMaterial
           color="#2a0716"
           emissive="#ff1f8f"
-          emissiveIntensity={0.8}
+          emissiveIntensity={0.5}
           metalness={0.7}
-          roughness={0.2}
+          roughness={0.25}
           flatShading
         />
       </Icosahedron>

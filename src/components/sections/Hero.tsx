@@ -13,7 +13,7 @@ export default function Hero() {
       <SceneCanvas />
 
       {/* Vignette + gradient veils over the canvas */}
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(6,5,12,0.55)_75%,var(--void)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(5,4,9,0.5)_0%,transparent_24%,rgba(6,5,12,0.55)_75%,var(--void)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-void to-transparent" />
 
       <div className="relative z-20 mx-auto max-w-3xl px-6 text-center">
