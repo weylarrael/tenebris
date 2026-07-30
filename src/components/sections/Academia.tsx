@@ -1,4 +1,5 @@
 import Reveal from "@/components/ui/Reveal";
+import { SITE } from "@/lib/site";
 
 export default function Academia() {
   return (
@@ -8,25 +9,35 @@ export default function Academia() {
           La Academia
         </p>
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
-          Una academia para quienes
+          Una academia destinada a la
           <br />
-          recuerdan la <span className="text-aurum">luz</span> en la oscuridad
+          <span className="text-aurum">experimentación</span> de la luz
         </h2>
+
+        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-[var(--aether)]">
+          <span className="text-[var(--fuchsia-neon)]">◈</span> +{SITE.experienceYears} años de
+          experiencia en la disciplina
+        </div>
       </Reveal>
 
       <Reveal delay={0.15}>
         <div className="mx-auto mt-12 max-w-2xl space-y-6 text-center font-serif text-lg leading-relaxed text-parchment/80">
           <p>
-            Tenebris es una academia arcanista arcturiana dedicada a la difusión
-            y la instrucción. Aquí la tiniebla no es ausencia: es el vacío fértil
-            donde aprende a pronunciarse el lenguaje de la luz.
+            Para quien busca la verdad llega el momento de quitarse el miedo a la
+            conexión directa con la luz. Pasar de las palabras a la sensibilidad
+            es necesario para experimentar de primera mano lo que hay más allá.
           </p>
           <p>
+            Toda visión, percepción, trauma, idea, rareza o bloqueo puede
+            responderse con técnicas de canalización de la luz, pidiendo
+            asesoramiento a energías que forman parte del ser. Generar consciencia
+            sobre la propia energía promueve un mejor funcionamiento del cuerpo y
+            el exilio de vergüenzas y mentiras que no son parte del alma.
+          </p>
+          <p className="text-parchment/60">
             Bajo la enseñanza de{" "}
-            <span className="text-gold-bright">Weylarrael</span>, estudiamos y
-            desarrollamos la plataforma divina y el dominio espiritual a través de
-            prácticas vivas, herramientas místicas y un camino de sensibilidad
-            que cada alma recorre a su propio ritmo.
+            <span className="text-gold-bright">Weylarrael</span>, difusión e
+            instrucción del lenguaje de la luz.
           </p>
         </div>
       </Reveal>

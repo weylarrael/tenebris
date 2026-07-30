@@ -136,6 +136,51 @@ body::after {
   }
 }
 
+/* Holographic wordmark: cyan → blue → violet → magenta → orange → gold */
+.text-holo {
+  background: linear-gradient(
+    92deg,
+    #17e0cf 0%,
+    #35c0ff 16%,
+    #6c7bff 32%,
+    #a06bff 46%,
+    #ff2d95 62%,
+    #ff5e8a 74%,
+    #ff9d5c 87%,
+    #ffe6a1 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 26px rgba(108, 123, 255, 0.35))
+    drop-shadow(0 0 44px rgba(255, 45, 149, 0.2));
+  animation: holo 8s linear infinite;
+}
+@keyframes holo {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Iridescent text for the "Prístino / Tornasolado" path */
+.text-iris {
+  background: linear-gradient(92deg, #17e0cf, #6c7bff, #ff2d95, #ff9d5c, #ffe6a1, #17e0cf);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: holo 6s linear infinite;
+}
+
+/* HUD-style outline button with clipped corners */
+.btn-hud {
+  position: relative;
+  border: 1px solid currentColor;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
 .tracking-arcane {
   letter-spacing: 0.42em;
 }

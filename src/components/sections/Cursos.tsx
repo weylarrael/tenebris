@@ -1,0 +1,45 @@
+import { LINKS } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/ui/icons";
+import Reveal from "@/components/ui/Reveal";
+
+export default function Cursos() {
+  return (
+    <section id="cursos" className="relative mx-auto max-w-6xl px-6 py-28 sm:py-36">
+      <Reveal className="mx-auto max-w-2xl text-center">
+        <p className="font-display text-xs uppercase tracking-arcane text-[var(--aether)]">
+          Los Cursos
+        </p>
+        <h2 className="mt-6 font-display text-3xl sm:text-4xl md:text-5xl">
+          Formación en el <span className="text-aurum">Arcanismo</span>
+        </h2>
+        <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted">
+          Programas de estudio para recorrer los senderos de forma estructurada,
+          a tu ritmo y con acompañamiento.
+        </p>
+      </Reveal>
+
+      <Reveal delay={0.15}>
+        <div className="card-arcane mx-auto mt-14 flex max-w-3xl flex-col items-center gap-6 rounded-2xl px-8 py-14 text-center">
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-[var(--fuchsia-neon)]">
+            Próximamente
+          </span>
+          <p className="max-w-md font-serif text-lg leading-relaxed text-parchment/80">
+            Los cursos están en preparación. Escribinos y te avisamos apenas se
+            abran las inscripciones de la próxima cohorte.
+          </p>
+          <a
+            href={`${LINKS.whatsapp}?text=${encodeURIComponent(
+              "Hola, quiero información sobre los cursos de Tenebris."
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-hud inline-flex items-center gap-2 px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--aether)] hover:bg-[rgba(23,224,207,0.1)] hover:shadow-[0_0_24px_-4px_rgba(23,224,207,0.7)]"
+          >
+            <WhatsAppIcon className="h-4 w-4" />
+            Avisame cuando abran
+          </a>
+        </div>
+      </Reveal>
+    </section>
+  );
+}

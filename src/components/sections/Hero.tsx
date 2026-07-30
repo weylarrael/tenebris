@@ -1,8 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SceneCanvas from "@/components/three/SceneCanvas";
+import { useEffect, useState } from "react";
+import Plexus from "@/components/three/Plexus";
 import { LINKS, SITE } from "@/lib/site";
+
+function HudClock() {
+  const [time, setTime] = useState<string | null>(null);
+  useEffect(() => {
+    const tick = () =>
+      setTime(
+        new Date().toLocaleTimeString("es-AR", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        })
+      );
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <span className="font-mono text-xs tracking-[0.2em] text-[var(--aether)]/70" suppressHydrationWarning>
+      {time ?? "--:--:--"}
+    </span>
+  );
+}
 
 export default function Hero() {
   return (
@@ -10,36 +34,47 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center justify-center overflow-hidden"
     >
-      <SceneCanvas />
+      {/* Constellation / plexus network */}
+      <div className="pointer-events-none absolute inset-0 z-0 opacity-90">
+        <Plexus />
+      </div>
 
-      {/* Vignette + gradient veils over the canvas */}
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(5,4,9,0.5)_0%,transparent_24%,rgba(6,5,12,0.55)_75%,var(--void)_100%)]" />
+      {/* Veils */}
+      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(3,3,5,0.5)_78%,var(--void)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-void to-transparent" />
 
-      <div className="relative z-20 mx-auto max-w-3xl px-6 text-center">
+      {/* HUD corners */}
+      <div className="absolute left-5 top-24 z-20 hidden font-mono text-xs tracking-[0.2em] text-muted/60 sm:block">
+        {SITE.version}
+      </div>
+      <div className="absolute bottom-6 right-5 z-20 hidden sm:block">
+        <HudClock />
+      </div>
+
+      <div className="relative z-20 mx-auto max-w-4xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="px-2 font-display text-[0.62rem] uppercase leading-relaxed tracking-[0.2em] text-gold/80 sm:text-xs sm:tracking-arcane"
+          className="font-mono text-[0.7rem] uppercase tracking-[0.4em] text-[var(--aether)] neon-teal sm:text-sm"
         >
-          {SITE.academy}
+          {SITE.eyebrow}
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 font-wordmark text-[2.5rem] font-bold leading-[1.05] tracking-[0.12em] drop-shadow-[0_0_20px_rgba(207,6,86,0.4)] sm:mt-6 sm:text-7xl sm:tracking-[0.2em] md:text-8xl"
+          className="mt-5 font-wordmark text-[3rem] font-bold leading-[1.02] tracking-[0.06em] sm:mt-6 sm:text-8xl sm:tracking-[0.12em]"
         >
-          <span className="text-aurum">TENEBRIS</span>
+          <span className="text-holo">TENEBRIS</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.9 }}
-          className="mx-auto mt-6 max-w-xl font-mono text-base uppercase tracking-[0.18em] text-[var(--aether)] neon-teal sm:text-lg"
+          className="mx-auto mt-6 max-w-xl font-mono text-sm uppercase tracking-[0.22em] text-parchment/70 sm:text-base"
         >
           {SITE.tagline}
         </motion.p>
@@ -48,10 +83,10 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.1 }}
-          className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted"
+          className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-muted"
         >
           Centro arcanista de estudio y desarrollo del lenguaje de la luz.
-          Difusión e instrucción de la plataforma divina y el dominio espiritual.
+          Difusión e instrucción de técnicas del dominio de la energía.
         </motion.p>
 
         <motion.div
@@ -61,8 +96,8 @@ export default function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
-            href="#disciplinas"
-            className="rounded-md bg-gradient-to-r from-gold-dim via-gold to-gold-bright px-8 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-void shadow-[0_0_22px_-4px_rgba(230,185,79,0.55)] transition hover:brightness-110"
+            href="#senderos"
+            className="btn-hud px-8 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--aether)] hover:bg-[rgba(23,224,207,0.1)] hover:shadow-[0_0_24px_-4px_rgba(23,224,207,0.7)]"
           >
             Iniciar el sendero
           </a>
@@ -70,7 +105,7 @@ export default function Hero() {
             href={LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-[var(--fuchsia)] px-8 py-3 text-xs uppercase tracking-[0.24em] text-parchment/90 shadow-[0_0_18px_-6px_rgba(207,6,86,0.6)] transition hover:bg-[rgba(207,6,86,0.12)] hover:text-[var(--fuchsia-neon)]"
+            className="btn-hud px-8 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--fuchsia-neon)] hover:bg-[rgba(255,45,149,0.1)] hover:shadow-[0_0_24px_-4px_rgba(255,45,149,0.7)]"
           >
             Sesiones por WhatsApp
           </a>
@@ -90,7 +125,7 @@ export default function Hero() {
           className="flex flex-col items-center gap-2 text-muted"
         >
           <span className="text-[0.6rem] uppercase tracking-[0.3em]">Descender</span>
-          <span className="h-8 w-px bg-gradient-to-b from-gold to-transparent" />
+          <span className="h-8 w-px bg-gradient-to-b from-[var(--aether)] to-transparent" />
         </motion.div>
       </motion.div>
     </section>
