@@ -7,7 +7,7 @@ import {
   Share_Tech_Mono,
 } from "next/font/google";
 import "./globals.css";
-import StarfieldBackground from "@/components/three/StarfieldBackground";
+import PlexusBackground from "@/components/three/PlexusBackground";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -82,7 +82,7 @@ export default function RootLayout({
       className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} ${orbitron.variable} ${techMono.variable}`}
     >
       <body className="min-h-screen antialiased">
-        <StarfieldBackground />
+        <PlexusBackground />
         {children}
       </body>
     </html>

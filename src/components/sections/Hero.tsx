@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Plexus from "@/components/three/Plexus";
 import { LINKS, SITE } from "@/lib/site";
 
 function HudClock() {
@@ -34,13 +33,8 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center justify-center overflow-hidden"
     >
-      {/* Constellation / plexus network */}
-      <div className="pointer-events-none absolute inset-0 z-0 opacity-90">
-        <Plexus />
-      </div>
-
-      {/* Veils */}
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(3,3,5,0.5)_78%,var(--void)_100%)]" />
+      {/* Veil so the title stays legible over the global constellation bg */}
+      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(5,5,8,0.55)_0%,transparent_45%,rgba(3,3,5,0.5)_80%,var(--void)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-void to-transparent" />
 
       {/* HUD corners */}
@@ -65,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 font-wordmark text-[3rem] font-bold leading-[1.02] tracking-[0.06em] sm:mt-6 sm:text-8xl sm:tracking-[0.12em]"
+          className="mt-5 font-wordmark text-[3.25rem] font-black leading-[1] tracking-[0.08em] sm:mt-6 sm:text-[8.5rem] sm:tracking-[0.14em]"
         >
           <span className="text-holo">TENEBRIS</span>
         </motion.h1>
