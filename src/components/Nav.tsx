@@ -66,9 +66,7 @@ export default function Nav() {
       {open && (
         <div className="border-t border-[var(--line)] bg-void/95 px-6 py-6 md:hidden">
           <ul className="flex flex-col gap-5">
-            {NAV.filter(
-              (item) => item.label !== "Sesiones" && item.label !== "Tienda"
-            ).map((item) => (
+            {NAV.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}

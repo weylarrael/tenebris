@@ -22,8 +22,6 @@ export const NAV = [
   { label: "Academia", href: "#academia" },
   { label: "Senderos", href: "#senderos" },
   { label: "Cursos", href: "#cursos" },
-  { label: "Tienda", href: "#tienda" },
-  { label: "Sesiones", href: "#sesiones" },
 ];
 
 // Los 7 senderos / escuelas del arcanismo, con su color-clave.
