@@ -13,7 +13,7 @@ export default function Tienda() {
           La Tienda
         </p>
         <h2 className="mt-6 font-display text-3xl sm:text-4xl md:text-5xl">
-          Ofrendas del <span className="text-aurum">Arcano</span>
+          Nuestros <span className="text-aurum">Servicios</span>
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted">
           Sesiones, iniciaciones y herramientas místicas para acompañar tu
@@ -42,12 +42,9 @@ export default function Tienda() {
               </span>
             </div>
 
-            <h3 className="relative mt-5 font-display text-base leading-snug tracking-wide text-parchment">
+            <h3 className="relative mt-5 flex-1 font-display text-base leading-snug tracking-wide text-parchment">
               {item.title}
             </h3>
-            <p className="relative mt-3 flex-1 text-sm leading-relaxed text-muted">
-              {item.desc}
-            </p>
 
             <div className="relative mt-6">
               <a

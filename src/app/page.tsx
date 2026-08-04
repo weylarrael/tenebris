@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         {/* Opaque, legible backdrop over the constellations for the rest of the page */}
-        <div className="relative bg-void-2/70 backdrop-blur-sm">
+        <div className="relative bg-void-2/70">
           <Academia />
           <Senderos />
           <Tienda />

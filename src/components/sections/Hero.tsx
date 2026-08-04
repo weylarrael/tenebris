@@ -92,7 +92,7 @@ export default function Hero() {
         >
           <a
             href="#academia"
-            className="btn-hud w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-[var(--aether)] sm:w-auto"
+            className="btn-hud btn-cyan w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] sm:w-auto"
           >
             Más información
           </a>
@@ -100,7 +100,7 @@ export default function Hero() {
             href={LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-hud w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-[var(--fuchsia-neon)] sm:w-auto"
+            className="btn-hud btn-fuchsia w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] sm:w-auto"
           >
             Sesiones por WhatsApp
           </a>

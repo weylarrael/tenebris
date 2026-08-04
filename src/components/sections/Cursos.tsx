@@ -33,7 +33,7 @@ export default function Cursos() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-hud inline-flex items-center gap-2 px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--aether)] hover:bg-[rgba(23,224,207,0.1)] hover:shadow-[0_0_24px_-4px_rgba(23,224,207,0.7)]"
+            className="btn-hud btn-cyan inline-flex items-center gap-2 px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em]"
           >
             <WhatsAppIcon className="h-4 w-4" />
             Avisame cuando abran

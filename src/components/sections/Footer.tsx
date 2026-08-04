@@ -15,7 +15,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--line)] bg-void-2/70 backdrop-blur-sm">
+    <footer className="border-t border-[var(--line)] bg-void-2/70">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col items-center gap-8 text-center">
           <a href="#top" className="flex items-center gap-3">

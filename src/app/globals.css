@@ -183,18 +183,27 @@ body::after {
 }
 
 /* HUD button lifted from the CodePen: clipped corners, faint fill in the
-   button's own color, and a neon glow that intensifies on hover. */
+   button's own color, and — on hover — a solid fill with dark text. */
 .btn-hud {
+  --btn: #17e0cf;
   position: relative;
-  border: 1.5px solid currentColor;
-  background: color-mix(in srgb, currentColor 8%, transparent);
+  border: 1.5px solid var(--btn);
+  background: color-mix(in srgb, var(--btn) 10%, transparent);
+  color: var(--btn);
   clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
-  box-shadow: 0 0 18px -6px currentColor, inset 0 0 20px -14px currentColor;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 18px -6px var(--btn), inset 0 0 20px -14px var(--btn);
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 .btn-hud:hover {
-  background: color-mix(in srgb, currentColor 18%, transparent);
-  box-shadow: 0 0 28px -4px currentColor, inset 0 0 22px -10px currentColor;
+  background: var(--btn);
+  color: #050508;
+  box-shadow: 0 0 30px -4px var(--btn), inset 0 0 24px -8px rgba(0, 0, 0, 0.35);
+}
+.btn-cyan {
+  --btn: #17e0cf;
+}
+.btn-fuchsia {
+  --btn: #ff2d95;
 }
 
 .tracking-arcane {
