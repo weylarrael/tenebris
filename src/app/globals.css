@@ -187,17 +187,31 @@ body::after {
 .btn-hud {
   --btn: #17e0cf;
   position: relative;
+  isolation: isolate;
   border: 1.5px solid var(--btn);
   background: color-mix(in srgb, var(--btn) 10%, transparent);
   color: var(--btn);
   clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
   box-shadow: 0 0 18px -6px var(--btn), inset 0 0 20px -14px var(--btn);
-  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  transition: color 0.35s ease, box-shadow 0.3s ease;
+}
+/* Fill that wipes in from the left on hover (CodePen get-started effect) */
+.btn-hud::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--btn);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s ease;
 }
 .btn-hud:hover {
-  background: var(--btn);
   color: #050508;
   box-shadow: 0 0 30px -4px var(--btn), inset 0 0 24px -8px rgba(0, 0, 0, 0.35);
+}
+.btn-hud:hover::before {
+  transform: scaleX(1);
 }
 .btn-cyan {
   --btn: #17e0cf;
