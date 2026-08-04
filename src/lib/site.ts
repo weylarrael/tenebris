@@ -2,7 +2,7 @@ export const SITE = {
   name: "Tenebris",
   creator: "Weylarrael",
   academy: "Academia Arcanista Arcturiana de Shangri-La",
-  eyebrow: "// ACTUALIZA TU HUMANO",
+  eyebrow: "ACTUALIZA TU HUMANO",
   tagline: "Donde la oscuridad se vuelve lenguaje de luz.",
   claim: "Actualiza a tu humano · purifica tus canales.",
   whatsappNumber: "+54 9 11 6052-1298",

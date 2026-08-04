@@ -182,12 +182,19 @@ body::after {
   animation: holo 6s linear infinite;
 }
 
-/* HUD-style outline button with clipped corners */
+/* HUD button lifted from the CodePen: clipped corners, faint fill in the
+   button's own color, and a neon glow that intensifies on hover. */
 .btn-hud {
   position: relative;
-  border: 1px solid currentColor;
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  border: 1.5px solid currentColor;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  box-shadow: 0 0 18px -6px currentColor, inset 0 0 20px -14px currentColor;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.btn-hud:hover {
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  box-shadow: 0 0 28px -4px currentColor, inset 0 0 22px -10px currentColor;
 }
 
 .tracking-arcane {

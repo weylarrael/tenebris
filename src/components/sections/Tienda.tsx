@@ -49,8 +49,7 @@ export default function Tienda() {
               {item.desc}
             </p>
 
-            <div className="relative mt-6 flex items-center justify-between">
-              <span className="font-serif text-lg text-gold-bright">{item.price}</span>
+            <div className="relative mt-6">
               <a
                 href={`${LINKS.whatsapp}?text=${encodeURIComponent(
                   `Hola, quiero consultar por: ${item.title}`
@@ -58,7 +57,7 @@ export default function Tienda() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Consultar por ${item.title} en WhatsApp`}
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-4 py-2 text-[0.65rem] uppercase tracking-[0.18em] text-gold-bright transition hover:border-gold hover:bg-gold/10"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[var(--line)] px-4 py-2.5 text-[0.65rem] uppercase tracking-[0.18em] text-gold-bright transition hover:border-gold hover:bg-gold/10"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 Consultar

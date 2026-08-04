@@ -13,11 +13,14 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Academia />
-        <Senderos />
-        <Tienda />
-        <Cursos />
-        <Sesiones />
+        {/* Opaque, legible backdrop over the constellations for the rest of the page */}
+        <div className="relative bg-void-2/70 backdrop-blur-sm">
+          <Academia />
+          <Senderos />
+          <Tienda />
+          <Cursos />
+          <Sesiones />
+        </div>
       </main>
       <Footer />
     </>

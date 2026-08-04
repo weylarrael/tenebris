@@ -13,15 +13,10 @@ export default function Academia() {
           <br />
           <span className="text-aurum">experimentación</span> de la luz
         </h2>
-
-        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-[var(--aether)]">
-          <span className="text-[var(--fuchsia-neon)]">◈</span> +{SITE.experienceYears} años de
-          experiencia en la disciplina
-        </div>
       </Reveal>
 
       <Reveal delay={0.15}>
-        <div className="mx-auto mt-12 max-w-2xl space-y-6 text-center font-serif text-lg leading-relaxed text-parchment/80">
+        <div className="mx-auto mt-12 max-w-2xl space-y-6 text-center font-serif text-lg leading-relaxed text-white">
           <p>
             Para quien busca la verdad llega el momento de quitarse el miedo a la
             conexión directa con la luz. Pasar de las palabras a la sensibilidad
@@ -34,11 +29,6 @@ export default function Academia() {
             sobre la propia energía promueve un mejor funcionamiento del cuerpo y
             el exilio de vergüenzas y mentiras que no son parte del alma.
           </p>
-          <p className="text-parchment/60">
-            Bajo la enseñanza de{" "}
-            <span className="text-gold-bright">Weylarrael</span>, difusión e
-            instrucción del lenguaje de la luz.
-          </p>
         </div>
       </Reveal>
 
@@ -49,7 +39,7 @@ export default function Academia() {
             {[
               { k: "∞", v: "Difusión", d: "Conocimiento abierto y comunitario para todo buscador." },
               { k: "✶", v: "Instrucción", d: "Acompañamiento uno a uno en cada tramo del sendero." },
-              { k: "✦", v: "Sensibilidad", d: "El don que se cultiva, no se hereda: se despierta." },
+              { k: "✦", v: "Experiencia", d: `+${SITE.experienceYears} años de experiencia en la disciplina.` },
             ].map((item) => (
               <div
                 key={item.v}

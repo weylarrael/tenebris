@@ -50,8 +50,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-mono text-[0.7rem] uppercase tracking-[0.4em] text-[var(--aether)] neon-teal sm:text-sm"
+          className="font-mono text-sm uppercase tracking-[0.28em] text-[var(--aether)] neon-teal sm:text-base sm:tracking-[0.4em]"
         >
+          <span className="text-[var(--fuchsia-neon)] neon-fuchsia">//</span>{" "}
           {SITE.eyebrow}
         </motion.p>
 
@@ -59,7 +60,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 font-wordmark text-[3.25rem] font-black leading-[1] tracking-[0.08em] sm:mt-6 sm:text-[8.5rem] sm:tracking-[0.14em]"
+          className="mt-5 font-wordmark text-[2.7rem] font-black leading-[1] tracking-[0.05em] sm:mt-6 sm:text-7xl sm:tracking-[0.1em] md:text-[8.5rem] md:tracking-[0.14em]"
         >
           <span className="text-holo">TENEBRIS</span>
         </motion.h1>
@@ -87,19 +88,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.3 }}
-          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row"
         >
           <a
-            href="#senderos"
-            className="btn-hud px-8 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--aether)] hover:bg-[rgba(23,224,207,0.1)] hover:shadow-[0_0_24px_-4px_rgba(23,224,207,0.7)]"
+            href="#academia"
+            className="btn-hud w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-[var(--aether)] sm:w-auto"
           >
-            Iniciar el sendero
+            Más información
           </a>
           <a
             href={LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-hud px-8 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--fuchsia-neon)] hover:bg-[rgba(255,45,149,0.1)] hover:shadow-[0_0_24px_-4px_rgba(255,45,149,0.7)]"
+            className="btn-hud w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-[var(--fuchsia-neon)] sm:w-auto"
           >
             Sesiones por WhatsApp
           </a>
