@@ -69,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.9 }}
-          className="mx-auto mt-6 max-w-xl font-mono text-sm uppercase tracking-[0.22em] text-parchment/70 sm:text-base"
+          className="mx-auto mt-6 max-w-2xl font-mono text-base font-medium uppercase tracking-[0.22em] text-white [text-shadow:0_0_16px_rgba(255,255,255,0.35)] sm:text-xl"
         >
           {SITE.tagline}
         </motion.p>
@@ -92,7 +92,7 @@ export default function Hero() {
         >
           <a
             href="#academia"
-            className="btn-hud btn-cyan w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] sm:w-auto"
+            className="btn-hud btn-cyan w-full px-10 py-4 text-center text-sm font-bold uppercase tracking-[0.2em] sm:w-auto"
           >
             Más información
           </a>
@@ -100,7 +100,7 @@ export default function Hero() {
             href={LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-hud btn-fuchsia w-full px-8 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] sm:w-auto"
+            className="btn-hud btn-fuchsia w-full px-10 py-4 text-center text-sm font-bold uppercase tracking-[0.2em] sm:w-auto"
           >
             Sesiones por WhatsApp
           </a>
