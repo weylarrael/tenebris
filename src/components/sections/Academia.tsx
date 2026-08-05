@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export default function Academia() {
   return (
-    <section id="academia" className="relative mx-auto max-w-6xl px-6 py-28 sm:py-36">
+    <section id="academia" className="relative mx-auto max-w-6xl px-6 pt-10 pb-28 sm:pt-14 sm:pb-36">
       <Reveal className="text-center">
         <p className="font-display text-xs uppercase tracking-arcane text-[var(--aether)]">
           La Academia
