@@ -1,8 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { LINKS, SITE } from "@/lib/site";
+
+const CrystalLogo = dynamic(() => import("@/components/three/Crystal"), {
+  ssr: false,
+  loading: () => null,
+});
 
 function HudClock() {
   const [time, setTime] = useState<string | null>(null);
@@ -46,6 +52,15 @@ export default function Hero() {
       </div>
 
       <div className="relative z-20 mx-auto max-w-4xl px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="mx-auto mb-2 h-36 w-36 sm:mb-4 sm:h-48 sm:w-48"
+        >
+          <CrystalLogo />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}

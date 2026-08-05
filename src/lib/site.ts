@@ -126,10 +126,10 @@ export const SHOP = [
     glyph: "⚶",
   },
   {
-    title: "Sesión de 1 h · Conexión con los guías",
+    title: "Conexión con los guías",
     desc: "En lugar de talismán: aprende a hablar directamente con los tuyos.",
     price: "Consultar",
-    tag: "Sesión 1h",
+    tag: "Sesión",
     glyph: "✷",
   },
 ];

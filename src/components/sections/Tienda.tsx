@@ -42,9 +42,12 @@ export default function Tienda() {
               </span>
             </div>
 
-            <h3 className="relative mt-5 flex-1 font-display text-base leading-snug tracking-wide text-parchment">
+            <h3 className="relative mt-5 font-display text-base leading-snug tracking-wide text-parchment">
               {item.title}
             </h3>
+            <p className="relative mt-3 flex-1 text-sm leading-relaxed text-muted">
+              {item.desc}
+            </p>
 
             <div className="relative mt-6">
               <a
