@@ -37,7 +37,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden"
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden pt-28 pb-16 sm:pt-24"
     >
       {/* Veil so the title stays legible over the global constellation bg */}
       <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(5,5,8,0.55)_0%,transparent_45%,rgba(3,3,5,0.5)_80%,var(--void)_100%)]" />
@@ -121,9 +121,6 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.6 }}
           className="group mx-auto mt-12 flex flex-col items-center gap-1"
         >
-          <div className="pointer-events-none h-28 w-28 sm:h-32 sm:w-32">
-            <CrystalLogo />
-          </div>
           <motion.span
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -131,6 +128,9 @@ export default function Hero() {
           >
             Descender
           </motion.span>
+          <div className="pointer-events-none h-28 w-28 sm:h-32 sm:w-32">
+            <CrystalLogo />
+          </div>
         </motion.a>
       </div>
     </section>
