@@ -127,7 +127,7 @@ export const SHOP = [
   },
   {
     title: "Conexión con los guías",
-    desc: "En lugar de talismán: aprende a hablar directamente con los tuyos.",
+    desc: "Aprende a hablar directamente con los tuyos.",
     price: "Consultar",
     tag: "Sesión",
     glyph: "✷",
