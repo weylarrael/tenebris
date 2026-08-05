@@ -52,15 +52,6 @@ export default function Hero() {
       </div>
 
       <div className="relative z-20 mx-auto max-w-4xl px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto mb-2 h-36 w-36 sm:mb-4 sm:h-48 sm:w-48"
-        >
-          <CrystalLogo />
-        </motion.div>
-
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,26 +111,28 @@ export default function Hero() {
             Sesiones por WhatsApp
           </a>
         </motion.div>
-      </div>
 
-      {/* Scroll cue — clickable, smooth-scrolls to the next section */}
-      <motion.a
-        href="#academia"
-        aria-label="Descender a la Academia"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
-        className="group absolute bottom-8 left-1/2 z-20 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2 text-white/70 transition-colors group-hover:text-[var(--aether)]"
+        {/* Crystal logo doubling as the scroll cue — click to descend */}
+        <motion.a
+          href="#academia"
+          aria-label="Descender a la Academia"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.6 }}
+          className="group mx-auto mt-12 flex flex-col items-center gap-1"
         >
-          <span className="text-[0.6rem] uppercase tracking-[0.3em]">Descender</span>
-          <span className="h-8 w-px bg-gradient-to-b from-[var(--aether)] to-transparent" />
-        </motion.div>
-      </motion.a>
+          <div className="pointer-events-none h-28 w-28 sm:h-32 sm:w-32">
+            <CrystalLogo />
+          </div>
+          <motion.span
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="text-[0.6rem] uppercase tracking-[0.3em] text-white/70 transition-colors group-hover:text-[var(--fuchsia-neon)]"
+          >
+            Descender
+          </motion.span>
+        </motion.a>
+      </div>
     </section>
   );
 }
