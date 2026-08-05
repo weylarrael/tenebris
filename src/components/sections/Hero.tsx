@@ -107,22 +107,24 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll cue */}
-      <motion.div
+      {/* Scroll cue — clickable, smooth-scrolls to the next section */}
+      <motion.a
+        href="#academia"
+        aria-label="Descender a la Academia"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8 }}
-        className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2"
+        className="group absolute bottom-8 left-1/2 z-20 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2 text-muted"
+          className="flex flex-col items-center gap-2 text-white/70 transition-colors group-hover:text-[var(--aether)]"
         >
           <span className="text-[0.6rem] uppercase tracking-[0.3em]">Descender</span>
           <span className="h-8 w-px bg-gradient-to-b from-[var(--aether)] to-transparent" />
         </motion.div>
-      </motion.div>
+      </motion.a>
     </section>
   );
 }

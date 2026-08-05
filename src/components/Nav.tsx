@@ -37,7 +37,7 @@ export default function Nav() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="text-sm uppercase tracking-[0.2em] text-muted transition-colors hover:text-gold-bright"
+                className="text-sm font-medium uppercase tracking-[0.2em] text-white transition-colors hover:text-[var(--aether)]"
               >
                 {item.label}
               </a>
@@ -71,7 +71,7 @@ export default function Nav() {
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="font-display text-sm tracking-[0.2em] text-parchment"
+                  className="font-display text-sm tracking-[0.2em] text-white"
                 >
                   {item.label}
                 </a>
